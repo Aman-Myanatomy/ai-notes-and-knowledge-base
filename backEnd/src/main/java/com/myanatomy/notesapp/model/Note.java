@@ -26,8 +26,16 @@ public class Note {
   @TextIndexed
   private string Title;
 
-  @TextIndexed
+  @TextIndexed                 // Enables full-text search on this field
   private String content;
 
+  private String aiSummary;
 
+  private List<String> tags= new ArrayList<>();
+
+  @CreadtedDate
+  private LocalDateTime createdAt;
+
+  @LastModifiedDate
+  private LocalDateTime updatedAt;
 }
